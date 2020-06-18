@@ -10,7 +10,8 @@ let fragment = new DocumentFragment();
 
 function addItem() {
     let newItem = document.createElement("li");
-    newItem.textContent = itemInput.value;
+    let itemText = document.createElement("p");
+    itemText.textContent = itemInput.value;
     
     let deleteBtn = document.createElement("button");
     deleteBtn.classList.add("delete-button");
@@ -20,6 +21,7 @@ function addItem() {
     checkBtn.classList.add('check-button');
     checkBtn.innerHTML = "<i class='fas fa-check'></i>";
     
+    newItem.appendChild(itemText);
     newItem.appendChild(checkBtn);
     newItem.appendChild(deleteBtn);
     fragment.appendChild(newItem);

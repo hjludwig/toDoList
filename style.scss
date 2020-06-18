@@ -47,6 +47,7 @@ h1 {
         border: none;
         background: white;
         transition: all 0.5s ease;
+        cursor: pointer;
     }
     button:hover {
         background-color: $secondaryColor;
@@ -62,7 +63,7 @@ i {
 }
 .todo-container {
     @include center-items();
-    background-color: white;
+    // background-color: white;
     min-width: 50%;
 }
 .list {
@@ -73,16 +74,21 @@ i {
 }
 .list li {
     margin: 0.5rem;
-    border: 1px solid black;
-    padding: 0.5rem;
     display: flex;
     justify-content: space-between;
     // flex: 1 1 auto;
+    p {
+        flex: 1;
+        padding: 0.5rem;
+        background: white;
+    }
     button {
-        justify-content: flex-end;
+        padding: 0.5rem;
+        margin: 0;
+        border: none;
+        cursor: pointer;
     }
 }
-
 .checked {
     color: #ccc;
     text-decoration: line-through;
